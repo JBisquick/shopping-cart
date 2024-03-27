@@ -35,8 +35,21 @@ function App() {
           setCartItems(allItems);
           countItems(allItems);
         }
-        i += 0;
+        i ++;
       }
+    }
+  }
+
+  function removeItem(item) {
+    let i = 0;
+    for (const cartItem of cartItems) {
+      if (cartItem.id === item.id) {
+        const firstHalf = cartItems.slice(0, i);
+        const secondHalf = cartItems.slice(i+1);
+        setCartItems(firstHalf.concat(secondHalf))
+        countItems(firstHalf.concat(secondHalf));
+      }
+      i++;
     }
   }
 
@@ -54,7 +67,7 @@ function App() {
       {name === 'shopping' ? (
         <Shopping items={items} onClick={addItem} error={error} loading={loading} ></Shopping>
       ) : name === 'cart' ? (
-        <Cart></Cart>
+        <Cart cart={cartItems} onClick={removeItem} ></Cart>
       ) : (
         <Home></Home>
       )}
