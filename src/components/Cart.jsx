@@ -1,4 +1,6 @@
-function Cart({ cart, onClick }) {
+import { Link } from 'react-router-dom';
+
+function Cart({ cart, onClick, reset }) {
   let total = 0;
   for (const item of cart) {
     total += item.count * item.price;
@@ -31,7 +33,9 @@ function Cart({ cart, onClick }) {
       {cart.length > 0 ? (
         <div>
           <div>{total}</div>
-          <button>Check Out</button>
+          <Link to="/order" onClick={reset}>
+            Check Out
+          </Link>
         </div>
       ) : (
         <div>There is nothing in the cart!</div>

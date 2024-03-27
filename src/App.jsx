@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Cart from './components/Cart';
 import Shopping from './components/Shopping';
+import Order from './components/Order';
 import useItems from './hooks/useItems';
 import { useState } from 'react';
 
@@ -67,7 +68,16 @@ function App() {
       {name === 'shopping' ? (
         <Shopping items={items} onClick={addItem} error={error} loading={loading}></Shopping>
       ) : name === 'cart' ? (
-        <Cart cart={cartItems} onClick={removeItem}></Cart>
+        <Cart
+          cart={cartItems}
+          onClick={removeItem}
+          reset={() => {
+            setCartItems([]);
+            setNumberItems(0);
+          }}
+        ></Cart>
+      ) : name === 'order' ? (
+        <Order></Order>
       ) : (
         <Home></Home>
       )}
