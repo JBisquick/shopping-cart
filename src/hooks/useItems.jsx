@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const useItems = () => {
   const [items, setItems] = useState(null);
@@ -6,10 +6,10 @@ const useItems = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products', { mode: "cors" })
+    fetch('https://fakestoreapi.com/products', { mode: 'cors' })
       .then((response) => {
         if (response.status >= 400) {
-          throw new Error("server error");
+          throw new Error('server error');
         }
         return response.json();
       })
@@ -19,6 +19,6 @@ const useItems = () => {
   }, []);
 
   return { items, error, loading };
-}
+};
 
 export default useItems;

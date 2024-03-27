@@ -18,11 +18,11 @@ function Navigation({ items }) {
 }
 
 Navigation.propTypes = {
-  items: PropTypes.number,
-}
+  items: PropTypes.number
+};
 
 Navigation.defaultProps = {
-  items: 0,
-}
+  items: 0
+};
 
 export default Navigation;

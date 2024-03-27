@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-function Card( { item, onClick } ) {
+function Card({ item, onClick }) {
   const [quantity, setQuantity] = useState(1);
 
-  return(
+  return (
     <div>
       <h4>{item.category}</h4>
       <img src={item.image} />
@@ -11,8 +11,21 @@ function Card( { item, onClick } ) {
       <p>{item.description}</p>
       <div>{item.price}</div>
       <div>
-        <input type="number" value={quantity} onChange={(e) => {setQuantity(e.target.value)}} id={item.title} />
-        <button onClick={()=> {onClick(item, Number(quantity))}}>Add to Cart</button>
+        <input
+          type="number"
+          value={quantity}
+          onChange={(e) => {
+            setQuantity(e.target.value);
+          }}
+          id={item.title}
+        />
+        <button
+          onClick={() => {
+            onClick(item, Number(quantity));
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );

@@ -35,7 +35,7 @@ function App() {
           setCartItems(allItems);
           countItems(allItems);
         }
-        i ++;
+        i++;
       }
     }
   }
@@ -45,8 +45,8 @@ function App() {
     for (const cartItem of cartItems) {
       if (cartItem.id === item.id) {
         const firstHalf = cartItems.slice(0, i);
-        const secondHalf = cartItems.slice(i+1);
-        setCartItems(firstHalf.concat(secondHalf))
+        const secondHalf = cartItems.slice(i + 1);
+        setCartItems(firstHalf.concat(secondHalf));
         countItems(firstHalf.concat(secondHalf));
       }
       i++;
@@ -63,11 +63,11 @@ function App() {
 
   return (
     <div>
-      <Navigation items={numberItems} ></Navigation>
+      <Navigation items={numberItems}></Navigation>
       {name === 'shopping' ? (
-        <Shopping items={items} onClick={addItem} error={error} loading={loading} ></Shopping>
+        <Shopping items={items} onClick={addItem} error={error} loading={loading}></Shopping>
       ) : name === 'cart' ? (
-        <Cart cart={cartItems} onClick={removeItem} ></Cart>
+        <Cart cart={cartItems} onClick={removeItem}></Cart>
       ) : (
         <Home></Home>
       )}

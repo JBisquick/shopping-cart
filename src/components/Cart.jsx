@@ -4,7 +4,7 @@ function Cart({ cart, onClick }) {
     total += item.count * item.price;
   }
 
-  return(
+  return (
     <div>
       <div>
         <div>Item</div>
@@ -12,14 +12,20 @@ function Cart({ cart, onClick }) {
         <div>Quantity</div>
         <div>Total</div>
       </div>
-      {cart.map(item => (
+      {cart.map((item) => (
         <div key={item.id}>
           <img src={item.image} />
           <div>{item.title}</div>
           <div>{item.price}</div>
           <div>{item.count}</div>
           <div>{item.count * item.price}</div>
-          <button onClick={() => {onClick(item)}}>Delete</button>
+          <button
+            onClick={() => {
+              onClick(item);
+            }}
+          >
+            Delete
+          </button>
         </div>
       ))}
       <div>{total}</div>
