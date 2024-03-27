@@ -28,8 +28,14 @@ function Cart({ cart, onClick }) {
           </button>
         </div>
       ))}
-      <div>{total}</div>
-      <button>Check Out</button>
+      {cart.length > 0 ? (
+        <div>
+          <div>{total}</div>
+          <button>Check Out</button>
+        </div>
+      ) : (
+        <div>There is nothing in the cart!</div>
+      )}
     </div>
   );
 }
