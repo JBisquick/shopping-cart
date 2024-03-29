@@ -6,6 +6,7 @@ import Shopping from './components/Shopping';
 import Order from './components/Order';
 import useItems from './hooks/useItems';
 import { useState } from 'react';
+import './css/app.css'
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -63,7 +64,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Navigation items={numberItems}></Navigation>
       {name === 'shopping' ? (
         <Shopping items={items} onClick={addItem} error={error} loading={loading}></Shopping>
@@ -81,7 +82,7 @@ function App() {
       ) : (
         <Home></Home>
       )}
-    </div>
+    </>
   );
 }
 

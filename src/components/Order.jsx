@@ -1,5 +1,5 @@
-function Card() {
+function Order() {
   return <div>Order Confirmed</div>;
 }
 
-export default Card;
+export default Order;

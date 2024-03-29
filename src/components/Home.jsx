@@ -1,8 +1,9 @@
 import Store from './public/store.png';
+import '../css/home.css'
 
 function Home() {
   return (
-    <div>
+    <div className='home-container'>
       <h2>We Sell Random Shit</h2>
       <p>
         We don't believe in consistency for the Odin Online Shopping website. We just sell what ever

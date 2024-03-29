@@ -1,0 +1,12 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  text-align: center;
+}
+
+.card-container img {
+  width: 200px;
+  height: auto;
+}

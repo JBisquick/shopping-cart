@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import '../css/navigation.css'
 
 function Navigation({ items }) {
   return (
-    <div>
-      <h1>Odin Shopping</h1>
-      <div>
+    <div className="nav-container">
+      <h1 className='title'>Odin Shopping</h1>
+      <div className='link-container'>
         <Link to="/">Home</Link>
         <Link to="/shopping">Shopping</Link>
-        <div>
+        <div className='cart-link'>
           <Link to="/cart">Cart</Link>
           <div>{items}</div>
         </div>
