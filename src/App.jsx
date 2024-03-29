@@ -6,7 +6,7 @@ import Shopping from './components/Shopping';
 import Order from './components/Order';
 import useItems from './hooks/useItems';
 import { useState } from 'react';
-import './css/app.css'
+import './css/app.css';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);

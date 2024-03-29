@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../css/cart.css'
+import '../css/cart.css';
 
 function Cart({ cart, onClick, reset }) {
   let total = 0;
@@ -8,17 +8,17 @@ function Cart({ cart, onClick, reset }) {
   }
 
   return (
-    <div className='cart-container'>
-      <div className='cart-description'>
+    <div className="cart-container">
+      <div className="cart-description">
         <div>Item</div>
-        <div className='prices'>
+        <div className="prices">
           <div>Price</div>
           <div>Quantity</div>
           <div>Total</div>
         </div>
       </div>
       {cart.map((item) => (
-        <div key={item.id} className='cart-card'>
+        <div key={item.id} className="cart-card">
           <img src={item.image} />
           <div>{item.title}</div>
           <div>{item.price}</div>

@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import '../css/card.css'
+import '../css/card.css';
 
 function Card({ item, onClick }) {
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className='card-container'>
+    <div className="card-container">
       <h4>{item.category}</h4>
       <img src={item.image} />
       <h2>{item.title}</h2>
@@ -15,7 +15,7 @@ function Card({ item, onClick }) {
         <input
           type="number"
           value={quantity}
-          min='1'
+          min="1"
           onChange={(e) => {
             setQuantity(e.target.value);
           }}

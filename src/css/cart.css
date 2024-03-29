@@ -18,7 +18,7 @@
 .cart-card {
   display: flex;
   flex-direction: row;
-  gap: 20px; 
+  gap: 20px;
   justify-content: end;
 }
 
